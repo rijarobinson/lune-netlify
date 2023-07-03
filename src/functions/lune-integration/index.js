@@ -19,7 +19,7 @@ async function handler(requestEvent) {
       (attr) => attr.name === `${ratePrefix}${selectedShippingRateID}`
     ).value;
 
-    const LUNE_API_KEY = config.lune.accessKey;
+    const LUNE_API_KEY = config.lune.apiKey;
 
     if (!luneEstimateID) {
       console.log("No lune CO2 estimate ID is provided");
