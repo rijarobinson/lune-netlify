@@ -38,7 +38,7 @@ async function handler(requestEvent) {
         estimate_id: "luneEstimateID",
         metadata: {
           customer_email: cartDetails.customer_email,
-          transaction_id: cartDetails.id,
+          transaction_id: String(cartDetails.id),
         },
       }),
       headers: {
