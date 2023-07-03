@@ -47,6 +47,7 @@ async function handler(requestEvent) {
       },
       method: "POST",
     });
+    console.log("response: " +JSON.stringify(response));
     const data = await response.json();
 
     if (data.id) {
