@@ -10,6 +10,7 @@ const { config } = require("../../../config.js");
 async function handler(requestEvent) {
   try {
     const cartDetails = JSON.parse(requestEvent.body);
+    console.log(JSON.stringify(cartDetails));
     const ratePrefix = "rate_id_";
     const selectedShippingRateID =
       cartDetails["_embedded"]["fx:shipment"].shipping_service_id;
