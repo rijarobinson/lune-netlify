@@ -13,7 +13,7 @@ async function handler(requestEvent) {
     console.log(JSON.stringify(cartDetails));
     const ratePrefix = "rate_id_";
     const selectedShippingRateID =
-      cartDetails["fx:shipments"][0].shipping_service_id;
+      cartDetails["_embedded"]["fx:shipments"][0].shipping_service_id;
     const luneEstimateID = cartDetails["_embedded"]["fx:attributes"].find(
       (attr) => attr.name === `${ratePrefix}${selectedShippingRateID}`
     ).value;
